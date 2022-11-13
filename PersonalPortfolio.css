@@ -4,12 +4,25 @@
 
   html{
     max-width: 400rem;
+    min-width: min-content;
+  }
+
+  body{
+    min-height: 100%;
+    min-width: 100%;
+  }
+  :root{
+    --title-background: pink;
+    --background-color: darkblue;
+    --projects-backgroud: orange;
+    --general-font-color: white;
   }
 
   main{
     display: grid;
     grid-template-columns: 10rem 1fr 10rem;
     grid-template-rows: 20rem 1fr 1fr 1fr 20rem;
+    background-color: var(--background-color);
   }
 
   /*Grid Sections Assignment + section specs*/
@@ -18,27 +31,48 @@
     text-align: center;
   }
 
+  footer, nav{
+    grid-column: 1 / 4;
+  }
+  #nav{
+    grid-row: 1 / 2;
+  }
   #welcome-section{
     grid-row: 2 / 3;
   }
   #projects{
     grid-row: 3 / 4;
+    background-color: var(--projects-backgroud);
   }
+  .project-background-set{
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    background-color: var(--projects-backgroud);
+  }
+  
+  #contact{
+    grid-row: 4 / 5;
+  }
+footer{
+    grid-row: 5 / 6;
+  }
+  
+
 
   /*grid assignment end*/
 
-  :root{
-    --title-background: pink;
+  
+
+  #welcome-section, #projects, footer, #contact{
+    font-size: 10rem;
+    color: var(--general-font-color);
   }
 
-  #welcome-section, #projects{
-    font-size: 3rem;
-  }
+/*setting up projects section*/
   
   #project-container{
     display: flex;
     gap: 2rem;
-    margin: auto;
     flex-wrap: wrap;
   }
 
