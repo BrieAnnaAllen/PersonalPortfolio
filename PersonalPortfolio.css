@@ -57,15 +57,31 @@ footer{
     grid-row: 5 / 6;
   }
   
-
-
   /*grid assignment end*/
 
-  
 
-  #welcome-section, #projects, footer, #contact{
+  #welcome-section, #projects, footer, #contact, nav{
     font-size: 10rem;
+  }
+
+  #welcome-section, #projects, footer, #contact, nav, a, ul{
     color: var(--general-font-color);
+  }
+
+  /* Setting Up Nav*/
+
+  #nav-bar{
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: var(--background-color);
+  }
+
+  #nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35vw;
   }
 
 /*setting up projects section*/
@@ -107,4 +123,9 @@ a:hover .fade{
 
 a{
     text-decoration: none;
+}
+
+ul, li{
+  list-style: none;
+
 }
