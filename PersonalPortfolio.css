@@ -1,0 +1,46 @@
+*, ::before, ::after{
+    font-size: 62.5%;
+  }
+
+  :root{
+    --title-background: pink;
+  }
+
+  #welcome-section, #projects{
+    font-size: 3rem;
+  }
+  
+  #project-container{
+    display: flex;
+  }
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 5rem;
+    background-color: var(--title-background);
+}
+.project h3{
+    box-sizing: border-box;
+    border-top: 4rem;
+    display: block;
+    text-align: center;
+}
+
+.language{
+    color: var(--title-background);;
+    transition: color 1s ease-in-out;
+}
+a:hover .language{
+    color: red;
+}
+.project img{
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
