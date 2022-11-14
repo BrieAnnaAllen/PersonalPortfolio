@@ -179,6 +179,21 @@ li a img{
   max-height: 30px;
   object-fit: cover;
 }
+.contact-details{
+  transition: transform 0.4s ease-in-out;
+}
+
+.contact-details a{
+  transition: color 0.4s ease-in-out;
+}
+
+.contact-details a:hover{
+  color: var(--title-background);
+}
+.contact-details:hover{
+  transform: translate(0, 2vh);
+}
+
 ul, li{
   list-style: none;
 }
