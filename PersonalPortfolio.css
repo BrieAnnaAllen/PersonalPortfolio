@@ -7,6 +7,8 @@
   html{
     max-width: 400rem;
     min-width: min-content;
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
   }
 
   body{
@@ -22,10 +24,11 @@
     --main-font:  'Cute Font', cursive;
   }
 
+
   main{
     display: grid;
     grid-template-columns: 10rem 1fr 10rem;
-    grid-template-rows: minmax(min-content, 10rem) minmax(min-content, 50rem) minmax(min-content, 20rem) minmax(min-content, 20rem) 10rem;
+    grid-template-rows: minmax(min-content, 5rem) minmax(min-content, 50rem) minmax(min-content, 110rem) minmax(min-content, 20rem) 10rem;
     background-color: var(--background-color);
   }
 
@@ -38,8 +41,7 @@
   footer{
     grid-column: 1 / 4;
   }
-  #nav{
-  }
+
   #welcome-section{
     grid-row: 2 / 3;
     font-family: var(--main-font);
@@ -47,6 +49,16 @@
   #projects{
     grid-row: 3 / 4;
     background-color: var(--projects-backgroud);
+  }
+
+  #projects h2{
+    text-decoration: underline;
+    font-family: var(--main-font);
+    font-size: 10rem;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    z-index: 0;
   }
   .project-background-set{
     grid-row: 3 / 4;
@@ -89,39 +101,43 @@ footer{
     margin-top: -160px;
     color: var(--title-background);
   }
-  #nav-bar{
+  #navbar{
     position: fixed;
     display: block;
     width: 100%;
-    height: 14vh;
+    height: 6.5rem;
     box-sizing: border-box;
     margin-left: -10px;
     margin-top: -10px;
     background-color: var(--title-background);
     border-bottom: 2px black solid;
+    z-index: 10;
 
 
   }
 
-  #nav-bar ul{
+  #navbar ul{
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 35vw;
+    gap: 2rem;
     margin-top: 0px;
+    margin-left: .5rem;
   }
 
 /*setting up projects section*/
   
   #project-container{
     display: flex;
-    gap: 2rem;
+    justify-content: center;
+    gap: 4rem;
     flex-wrap: wrap;
   }
 
-.project{
+.project-tile{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,7 +146,7 @@ footer{
     box-sizing: border-box;
     border: 2px solid black;
 }
-.project h3{
+.project-tile h3{
     box-sizing: border-box;
     border-top: 4rem;
     display: block;
@@ -157,17 +173,18 @@ a:hover .fade{
 #contact p{
   position: relative;
   font-family: var(--main-font);
-  font-size: 8rem;
+  font-size: 5rem;
   margin-top: -18rem;
+  font-style: italic;
 }
 #contact ul{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
-  gap: 20px;
-  margin-top: -8rem;
+  font-size: 2rem;
+  gap: 6rem;
+  margin-top: -4rem;
   font-size: 8rem;
 
 }
@@ -198,3 +215,15 @@ ul, li{
   list-style: none;
 }
 
+footer{
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  border-top: 5px var(--title-background) solid;
+  font-size: 5rem;
+  text-align: center;
+}
+@media only screen and (max-width: 200px){
+  main{
+    font-size: 2rem;
+  }
+}
